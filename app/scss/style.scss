@@ -1,0 +1,299 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "vars";
+@import "libs";
+@import "fonts";
+
+/* ==============================
+        start style
+==============================*/
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 600;
+}
+
+body{
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color:  $color-black-accent;;
+}
+.hidden {
+  display: none;
+}
+
+
+.wrapper{
+  max-width: 768px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.box-big{
+  width: 66.1%;
+}
+.box-little{
+  width: 32.5%;
+  @include df-fdcolum-jcspace-between;
+}
+/* ==============================
+        header
+==============================*/
+.header{
+  padding: 35px 0;
+  text-align: center;
+  background: $color-black-bg;
+  color:  $color-white;
+  @include font-title;
+}
+
+
+/* ==============================
+        banners
+==============================*/
+.banners{
+  @include df-jcspace-between;
+  @include section-padding;
+  
+}
+.banner-big{
+   min-height: 492px;
+  height: 100%;
+    background: $color-dark-grey;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color:  $color-white;
+  padding: 30px 46px 30px 25px;
+  font-weight: 400;
+}
+.banner-little__box{
+    background: $color-dark-grey;
+    height: 241px;
+    @include box-text-position;
+    color:  $color-white;
+}
+
+/* ==============================
+        products
+==============================*/
+.products{
+  @include df-jcspace-between;
+  @include section-padding;
+  &-item{
+    &__big{
+      @include df-fdcolum-jcspace-between;
+    }
+    &__top{
+      @include df-jcspace-between;
+      width: 100%;
+      max-width: 492px;
+    }
+   
+  }
+}
+
+.product-elecrtonic,
+.product-appliances,
+.product-childish{
+  min-height: 155px;
+  background: $color-grey;
+  @include box-text-position;
+}
+.product-giftSet,
+.product-lastСhance{
+  min-height: 155px;
+  @include box-text-position;
+}
+.product-elecrtonic,
+.product-appliances{
+ max-width: 240px;
+ width: 100%;
+}
+.product-appliances{
+  margin-left: 10px;
+}
+
+.product-giftSet{
+  background: $color-rose;
+  margin-bottom: 10px;
+}
+.product-lastСhance{
+  background: $color-dark-blue;
+  
+}
+
+
+/* ==============================
+        contents
+==============================*/
+.contents{
+  @include df-jcspace-between;
+  @include section-padding;
+    &-big{
+    min-height: 492px;
+    height: 100%;
+    background: $color-birch;
+    line-height: 26px;
+    text-align: center;
+  }
+  &-little__box{
+      background: $color-birch;
+      height: 241px;
+      @include box-text-position;
+  }
+
+}
+
+.content-timeWash{
+  background-image: url('../img/time-wash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color:  $color-white;
+  transition: all 0.5s;
+  position: relative;
+  cursor: pointer;
+  font-weight: 400;
+  &__focus{
+    color: #FF3333;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+     opacity: 0;
+  }
+}
+.content-timeWash:hover{
+  background-image: url('../img/time-wash-hover.jpg');
+  .content-timeWash__focus{
+    opacity: 1;
+  }
+}
+
+.content-list{
+  padding: 50px;
+  line-height: 0.8;
+  &__item{
+      @include df-jcspace-between;
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 14px;
+    &-name{
+      font-weight: normal;
+    }
+    &-dashed{
+      border-bottom: 1px dashed $color-dark-grey;
+      flex-grow: 1;
+      margin: 0 5px;
+    }
+    &-brend{
+      text-decoration-line: underline;
+    }
+  }
+}
+/* ==============================
+        stocks
+==============================*/
+
+.stocks{
+  @include df-jcspace-between;
+  @include section-padding;
+   &-item{
+    &__big{
+      @include df-fdcolum-jcspace-between;
+    }
+    &__top{
+      @include df-jcspace-between;
+      width: 100%;
+      min-height: 155px;
+      margin-top: 10px;
+    }
+  }
+  &-amazing{
+    background: $color-yellow;
+    min-height: 155px;
+    @include box-text-position;
+  }
+  &-genius{
+    min-height: 155px;
+    background: $color-blue;
+    @include box-text-position;
+
+  }
+  &-superPrice,
+  &-profitably{
+    width: 48.7%;  
+    @include box-text-position;
+  }
+  &-superPrice{
+    background: $color-yellow;
+  }
+  &-profitably{
+    background: $color-tomato;
+
+  }
+  &-first{
+     background: $color-yellow;
+     min-height: 155px;
+     @include box-text-position;
+  }
+}
+
+/* ==============================
+        footer
+==============================*/
+
+.footer{
+  padding: 35px 0;
+  text-align: center;
+  background:   $color-black-bg;
+  color: $color-white;
+  font-size: 18px;
+  margin-top: 10px;
+  @include font-title;
+}
+
+@import "media";

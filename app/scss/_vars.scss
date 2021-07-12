@@ -1,0 +1,40 @@
+@mixin box-text-position{
+    padding: 15px;
+    display: flex;
+    align-items: flex-end;
+}
+@mixin df-fdcolum-jcspace-between{
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin df-jcspace-between{
+    display: flex;
+    justify-content: space-between;
+}
+@mixin section-padding{
+    @media (min-width: 481px) {
+        padding: 10px 12px 0 12px; 
+    }
+    @media (max-width: 480px) {
+        padding: 10px 0px 0 0px; 
+    }
+}
+@mixin font-title{
+    font-size: 24px;
+    font-family: 'LabGrotesque-500';
+}
+
+$color-white-accent: #FFFFFF;
+$color-black-accent: #323C46;
+$color-black-bg: #323C46;
+$color-dark-grey: #71787F;
+$color-grey: #F1F2F2;
+$color-rose: #FFC1C1;
+$color-dark-blue: #85B1F9;
+$color-birch: #C3F3E2;
+$color-yellow: #FFF48E;
+$color-tomato: #EE6956;
+$color-blue: #D9EAFF;
+

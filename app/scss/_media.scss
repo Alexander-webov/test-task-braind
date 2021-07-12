@@ -1,0 +1,70 @@
+@media (max-width: 480px) {
+    @mixin section-padding{
+        padding: 10px 0px 0 0px; 
+    }
+    .header{
+        order: 0;
+    }
+    .banners{
+        order: 2;
+    }
+    .banner-little.banner-little{
+        flex-direction: column;
+        width: 100%;
+        max-width: 100px;
+        margin-left: 10px;
+        margin-top: 0;
+        
+    }
+    .banner-big{
+        min-height: auto;
+        height: 210px;
+        overflow-y: auto;
+        width: 100%;
+        padding: 10px 20px 30px 20px;
+    }
+    .banner-little__box{
+        height: 100px;
+        max-width: 100px;
+    }
+    .products{
+        order: 1;
+        flex-direction: column;
+    }
+    .box-big{
+        width: 100%;
+    }
+    .products-item__bottom{
+        margin: 10px 0;
+    }
+    .box-little{
+        width: 100%;
+        flex-direction: row;
+    }
+    .product-giftSet,
+    .product-lastСhance{
+        width: 48.5%;
+    }
+    .product-giftSet{
+        margin-bottom: 0;
+    }
+    .contents{
+        display: none;
+    }
+    .stocks{
+        order: 3;
+        flex-direction: column-reverse;
+    }
+    .stocks-superPrice,
+    .stocks-profitably,
+    .stocks-amazing,
+    .stocks-genius{
+        padding: 15px 35px 15px 15px;
+        width: calc((100% - 2 * 5px)/2);
+        margin: 0 0 10px;
+    }
+    .footer{
+        order: 4;
+        margin-top: 0;
+    }
+}
